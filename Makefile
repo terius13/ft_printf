@@ -6,7 +6,7 @@
 #    By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 18:06:42 by ting              #+#    #+#              #
-#    Updated: 2023/10/02 18:24:02 by ting             ###   ########.fr        #
+#    Updated: 2023/10/02 18:28:06 by ting             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 
 $(NAME):
 	cc $(FLAGS) -c $(SRC)
-	ar rc $(NAME)
+	ar rc $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

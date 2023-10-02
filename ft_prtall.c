@@ -6,7 +6,7 @@
 /*   By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:22:22 by ting              #+#    #+#             */
-/*   Updated: 2023/10/02 18:26:06 by ting             ###   ########.fr       */
+/*   Updated: 2023/10/02 20:56:45 by ting             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_prtnbr(int nbr)
 	n = nbr;
 	if (n < 0)
 	{
-		ft_prtchar('-');
+		count += ft_prtchar('-');
 		n = -n;
 	}
 	if (n > 9)
@@ -72,7 +72,7 @@ int	ft_prtunnbr(unsigned int nbr)
 	return (count);
 }
 
-int	ft_prthexe(unsigned long long n, char format)
+int	ft_prthexe(unsigned long n, char format)
 {
 	int		count;
 	char	*base;
@@ -80,20 +80,24 @@ int	ft_prthexe(unsigned long long n, char format)
 	count = 0;
 	base = "0123456789abcdef";
 	if (format == 'X')
+	{
 		base = "0123456789ABCDEF";
+	}
 	else if (format == 'p')
+	{
 		if (n == 0)
-			count += ft_prtstr("(nil)");
+			return (ft_prtstr("(nil)"));
+	}
 	if (n > 15)
 		count += ft_prthexe(n / 16, format);
 	n = n % 16;
-	if (count == 0)
+	if (count == 0 && format == 'p')
 		count += ft_prtstr("0x");
 	count += ft_prtchar(base[n]);
 	return (count);
 }
 /*
-int	ft_prthex(unsigned long long n, char format)
+int	ft_prthexe(unsigned long n, char format)
 {
 	int	count;
 	char	*base;
@@ -105,14 +109,15 @@ int	ft_prthex(unsigned long long n, char format)
 		base = "0123456789abcdef";
 	if (n > 15)
 	{
-		count += ft_prthex(n / 16, format);
+		count += ft_prthexe(n / 16, format);
 	}
 	n = n % 16;
 	count += ft_prtchar(base[n]);
 	return (count);
 }
-
-int	ft_prtaddress(unsigned long long n)
+*/
+/*
+int	ft_prtaddress(unsigned long n)
 {
 	int	count;
 

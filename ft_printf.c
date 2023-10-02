@@ -6,7 +6,7 @@
 /*   By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:22:58 by ting              #+#    #+#             */
-/*   Updated: 2023/10/02 18:25:51 by ting             ###   ########.fr       */
+/*   Updated: 2023/10/02 20:58:30 by ting             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int	ft_checker(va_list list, char format)
 		return (ft_prtnbr(va_arg(list, int)));
 	if (format == 'u')
 		return (ft_prtunnbr(va_arg(list, unsigned int)));
-	if (format == 'X' || format == 'x' || format == 'p')
-		return (ft_prthexe(va_arg(list, unsigned long long), format));
+	if (format == 'X' || format == 'x')
+		return (ft_prthexe(va_arg(list, unsigned int), format));
+	if (format == 'p')
+		return (ft_prthexe(va_arg(list, unsigned long), format));
 	if (format == '%')
 		return (ft_prtchar('%'));
 	return (0);
@@ -56,10 +58,10 @@ int	ft_printf(const char *str, ...)
 #include <stdio.h>
 int	main(void)
 {
-	char str[] = "world";
+//	char str[] = "world";
 
-	int	count = ft_printf("hel%%lo %d\n", 123);
-	ft_printf("%d", count);
+//	int	count = ft_printf("hel%%lo %d\n", 123);
+	ft_printf(" %p %p ", 0, 0);
 
 }
 */
