@@ -6,11 +6,11 @@
 /*   By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:22:22 by ting              #+#    #+#             */
-/*   Updated: 2023/10/02 17:10:41 by ting             ###   ########.fr       */
+/*   Updated: 2023/10/02 18:26:06 by ting             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_prtchar(char c)
 {

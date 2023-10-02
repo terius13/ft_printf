@@ -6,7 +6,7 @@
 #    By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 18:06:42 by ting              #+#    #+#              #
-#    Updated: 2023/10/02 18:15:30 by ting             ###   ########.fr        #
+#    Updated: 2023/10/02 18:24:02 by ting             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,6 @@ NAME = libftprintf.a
 SRC = ft_printf.c ft_prtall.c
 
 FLAGS = -Wall -Wextra -Werror
-
-HEADER = printf.h
 
 OBJ = $(SRC:.c=.o)
 
