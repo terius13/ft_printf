@@ -6,7 +6,7 @@
 /*   By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:22:22 by ting              #+#    #+#             */
-/*   Updated: 2023/10/02 20:56:45 by ting             ###   ########.fr       */
+/*   Updated: 2023/10/02 23:34:58 by ting             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	ft_prtunnbr(unsigned int nbr)
 	return (count);
 }
 
-int	ft_prthexe(unsigned long n, char format)
+int	ft_prthex(unsigned long n, char format)
 {
 	int		count;
 	char	*base;
@@ -89,7 +89,7 @@ int	ft_prthexe(unsigned long n, char format)
 			return (ft_prtstr("(nil)"));
 	}
 	if (n > 15)
-		count += ft_prthexe(n / 16, format);
+		count += ft_prthex(n / 16, format);
 	n = n % 16;
 	if (count == 0 && format == 'p')
 		count += ft_prtstr("0x");
