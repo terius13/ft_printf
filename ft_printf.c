@@ -6,13 +6,13 @@
 /*   By: ting <ting@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:22:58 by ting              #+#    #+#             */
-/*   Updated: 2023/10/02 23:36:27 by ting             ###   ########.fr       */
+/*   Updated: 2023/10/07 15:21:01 by ting             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_checker(va_list list, char format)
+static int	ft_checker(va_list list, char format)
 {
 	if (format == 'c')
 		return (ft_prtchar(va_arg(list, int)));
